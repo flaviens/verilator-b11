@@ -51,20 +51,20 @@ int main(int argc, char **argv, char **env) {
     size_t tick_count_ = 0;
 #endif // VM_TRACE
 
-  my_module->in_data[0] = 0xbcbfd95d;
-  my_module->in_data[1] = 0x154dab50;
-  my_module->in_data[2] = 0xf98f8276;
+  my_module->in_data[0] = 0xaba273d2;
+  my_module->in_data[1] = 0xc7e07fd0;
+  my_module->in_data[2] = 0xa6ff357c;
 
   my_module->eval();
 
-  uint32_t out_0 = my_module->out_data[0];
+  uint32_t out_1 = my_module->out_data[1];
 
 #if VM_TRACE
       trace_->dump(0);
       trace_->flush();
 #endif // VM_TRACE
 
-  std::cout << "Output[1:0]: " << (out_0 & 0b11) << std::endl;
+  std::cout << "Output[33] " << ((out_1 & 0b10) >> 1) << std::endl;
 
   delete my_module;
   exit(0);
