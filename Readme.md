@@ -118,6 +118,9 @@ Output[1:0]: 3
 Output[1:0]: 1                                                        
 ```
 
+![Screenshot from 2024-01-19 11-00-08](https://github.com/flaviens/verilator-b11/assets/28906668/c1f7a2b3-4753-42fd-8c76-c2fe9fcfb556)
+
+
 In summary, the following individual flags correct the bug:
 `-fno-const-bit-op-tree`
 `-fno-expand`
